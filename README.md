@@ -39,5 +39,7 @@ Trong đó biến access_token là access token fanfage được cấp full quy�
 Đã comment công dụng của hàm, parameter và kiểu trả về của hàm ở file post.php. Viết lên đây cho đủ đội hình thôi :v
 ## Thông tin tác giả
 Tên: Trần Đức Ý
+</br>
 My email: ducy23061999.ghetdoi@gmail.com
+</br>
 Contact facebook: [Here](https://www.facebook.com/Tranducy1999)
