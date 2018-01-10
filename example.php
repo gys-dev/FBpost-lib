@@ -6,6 +6,6 @@ $post = new PostInfo();
 // Config
 $post->_getToken($access_token);
 $post->_getMyProfileId();
-$post->_getGroupId('ID Post');
+$post->_getPostId('ID Post');
 // Action :))
 $post->UpdatePost("Hello World! ^^");
