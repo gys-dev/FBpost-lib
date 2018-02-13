@@ -244,5 +244,30 @@ class PostInfo{
             curl_close($ch);
         }else echo "You not type your Post Id";
     }
-} // Het class
+    /* USED: Push comment into a post
+        @ Paramater $message is comment 
+        
+        NOTE: Available only fanfage 
+    */
+    public function Comment($message){
+        if (isset($this->postId)){
+            $data  = array();
+            // Config data
+            $data['message'] = $message;
+            $data['access_token'] = $this->acToken;
+            $post_url = 'https://graph.facebook.com/v2.11/'.$this->postId.'/comments';
+            // Curl 
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $post_url);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            $return = curl_exec($ch);
+            echo $return;
+            curl_close($ch);
+        }else echo "You not type your Post Id ";
+        
+    }
+    
+} 
 ?>
